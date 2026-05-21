@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plasmo Voice — голосовой чат для Minecraft</title>
+  <title>FoggyLand — голосовой чат</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: linear-gradient(135deg, #1e1e2f, #2a2a40);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       color: #f0f0f0;
       display: flex; justify-content: center; align-items: center;
       min-height: 100vh; padding: 20px;
@@ -17,8 +17,7 @@
       background: rgba(255,255,255,0.05);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px;
-      padding: 40px 32px;
+      border-radius: 24px; padding: 40px 32px;
       max-width: 700px; width: 100%;
       box-shadow: 0 20px 40px rgba(0,0,0,0.5);
       text-align: center;
@@ -43,7 +42,7 @@
       transition: 0.2s; cursor: pointer;
       box-shadow: 0 4px 12px rgba(0,114,255,0.4);
     }
-    .btn:hover { background: #005bcc; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,114,255,0.5); }
+    .btn:hover { background: #005bcc; transform: translateY(-2px); }
     .btn-secondary {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.15); box-shadow: none;
@@ -71,28 +70,27 @@
     <h1>Plasmo Voice</h1>
     <p class="subtitle">Реалистичный голосовой чат прямо в Minecraft</p>
 
-    <!-- IP сервера – замени на свой -->
     <div class="server-ip">play.your-server.ru</div>
     <p style="font-size:0.9rem; color:#888;">IP нашего сервера (скопируй кликом)</p>
 
     <div class="btn-group">
-      <!-- Кнопка "Скачать" ведёт на страницу с версиями -->
-      <a href="https://voice.foggyland.ru/downlad" class="btn">📥 Скачать</a>
+      <!-- Прямая ссылка на файл – замени на свою raw-ссылку -->
+      <a href="https://raw.githubusercontent.com/ТВОЙ_НИК/РЕПОЗИТОРИЙ/main/files/plasmo-voice-1.20.1-fabric.jar" class="btn">📥 Скачать</a>
       <a href="https://plasmovoice.com/" target="_blank" class="btn btn-secondary">🌐 Официальный сайт</a>
     </div>
 
     <div class="steps">
       <h2>Как установить</h2>
-      <div class="step"><strong>1.</strong> Установи Fabric или Forge (рекомендуем Fabric).</div>
-      <div class="step"><strong>2.</strong> Скачай Plasmo Voice для своей версии по кнопке «Скачать».</div>
-      <div class="step"><strong>3.</strong> Помести мод в папку <code>.minecraft/mods</code>.</div>
+      <div class="step"><strong>1.</strong> Установи Fabric (или Forge).</div>
+      <div class="step"><strong>2.</strong> Скачай мод по кнопке выше — загрузка начнётся сразу.</div>
+      <div class="step"><strong>3.</strong> Перемести скачанный .jar в папку <code>.minecraft/mods</code>.</div>
       <div class="step"><strong>4.</strong> Зайди на сервер <strong>play.your-server.ru</strong>.</div>
-      <div class="step"><strong>5.</strong> В игре нажми <strong>V</strong> для настроек голоса.</div>
+      <div class="step"><strong>5.</strong> Нажми <strong>V</strong> для настроек голоса в игре.</div>
     </div>
 
     <div class="footer">
-      Сайт сделан для сервера. По вопросам обращайся в Discord.<br>
-      Plasmo Voice — не наша разработка.
+      Нужна другая версия? <a href="downlad/">Посмотреть все версии</a><br>
+      По вопросам обращайся в Discord. Plasmo Voice — не наша разработка.
     </div>
   </div>
 </body>
