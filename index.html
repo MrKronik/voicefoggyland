@@ -6,131 +6,62 @@
   <title>Plasmo Voice — голосовой чат для Minecraft</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       background: linear-gradient(135deg, #1e1e2f, #2a2a40);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh; padding: 20px;
     }
-
     .card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255,255,255,0.05);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 24px;
       padding: 40px 32px;
-      max-width: 700px;
-      width: 100%;
+      max-width: 700px; width: 100%;
       box-shadow: 0 20px 40px rgba(0,0,0,0.5);
       text-align: center;
     }
-
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 8px;
+      font-size: 2.5rem; margin-bottom: 8px;
       background: linear-gradient(90deg, #00c6ff, #0072ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-
-    .subtitle {
-      font-size: 1.2rem;
-      color: #aaa;
-      margin-bottom: 24px;
-    }
-
+    .subtitle { font-size: 1.2rem; color: #aaa; margin-bottom: 24px; }
     .server-ip {
-      background: #12121c;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 12px 20px;
-      margin: 20px 0;
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #00c6ff;
-      user-select: all;
+      background: #12121c; border: 1px solid #333;
+      border-radius: 12px; padding: 12px 20px;
+      margin: 20px 0; font-size: 1.3rem;
+      font-weight: bold; color: #00c6ff; user-select: all;
     }
-
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin: 30px 0 20px;
-    }
-
+    .btn-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 30px 0 20px; }
     .btn {
-      background: #0072ff;
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 14px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.2s ease;
-      cursor: pointer;
+      background: #0072ff; color: white; border: none;
+      padding: 14px 28px; border-radius: 14px;
+      font-size: 1rem; font-weight: 600; text-decoration: none;
+      transition: 0.2s; cursor: pointer;
       box-shadow: 0 4px 12px rgba(0,114,255,0.4);
     }
-
-    .btn:hover {
-      background: #005bcc;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,114,255,0.5);
-    }
-
+    .btn:hover { background: #005bcc; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,114,255,0.5); }
     .btn-secondary {
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: none;
+      border: 1px solid rgba(255,255,255,0.15); box-shadow: none;
     }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.15);
-    }
-
+    .btn-secondary:hover { background: rgba(255,255,255,0.15); }
     .steps {
-      text-align: left;
-      margin-top: 30px;
-      background: rgba(0,0,0,0.2);
-      border-radius: 16px;
-      padding: 20px;
+      text-align: left; margin-top: 30px;
+      background: rgba(0,0,0,0.2); border-radius: 16px; padding: 20px;
     }
-
-    .steps h2 {
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-      color: #00c6ff;
-      text-align: center;
-    }
-
+    .steps h2 { font-size: 1.4rem; margin-bottom: 12px; color: #00c6ff; text-align: center; }
     .step {
-      margin-bottom: 14px;
-      padding-left: 24px;
-      position: relative;
-      line-height: 1.6;
+      margin-bottom: 14px; padding-left: 24px; position: relative; line-height: 1.6;
     }
-
     .step::before {
-      content: "•";
-      position: absolute;
-      left: 8px;
-      color: #00c6ff;
-      font-weight: bold;
-      font-size: 1.4rem;
+      content: "•"; position: absolute; left: 8px;
+      color: #00c6ff; font-weight: bold; font-size: 1.4rem;
     }
-
-    .footer {
-      margin-top: 28px;
-      font-size: 0.85rem;
-      color: #666;
-    }
-
+    .footer { margin-top: 28px; font-size: 0.85rem; color: #666; }
     a { color: #00c6ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
   </style>
@@ -140,36 +71,28 @@
     <h1>Plasmo Voice</h1>
     <p class="subtitle">Реалистичный голосовой чат прямо в Minecraft</p>
 
-    <div class="server-ip" id="serverIp">play.foggyland.ru</div>
+    <!-- IP сервера – замени на свой -->
+    <div class="server-ip">play.your-server.ru</div>
     <p style="font-size:0.9rem; color:#888;">IP нашего сервера (скопируй кликом)</p>
 
     <div class="btn-group">
-      <a href="https://modrinth.com/plugin/plasmo-voice/versions" target="_blank" class="btn">📥 Скачать клиентский мод</a>
+      <!-- Кнопка "Скачать" ведёт на страницу с версиями -->
+      <a href="https://voice.foggyland.ru/downlad" class="btn">📥 Скачать</a>
       <a href="https://plasmovoice.com/" target="_blank" class="btn btn-secondary">🌐 Официальный сайт</a>
     </div>
 
     <div class="steps">
       <h2>Как установить</h2>
-      <div class="step">
-        <strong>1.</strong> Установи Fabric или Forge для своей версии Minecraft (рекомендуем Fabric).
-      </div>
-      <div class="step">
-        <strong>2.</strong> Скачай Plasmo Voice для своей версии игры с кнопки выше (файл <code>.jar</code>).
-      </div>
-      <div class="step">
-        <strong>3.</strong> Помести скачанный мод в папку <code>.minecraft/mods</code>.
-      </div>
-      <div class="step">
-        <strong>4.</strong> Запусти игру, зайди на сервер <strong id="serverIpInline">play.your-server.ru</strong>.
-      </div>
-      <div class="step">
-        <strong>5.</strong> В игре нажми клавишу <strong>V</strong> (по умолчанию), чтобы открыть меню настроек голоса. Готово!
-      </div>
+      <div class="step"><strong>1.</strong> Установи Fabric или Forge (рекомендуем Fabric).</div>
+      <div class="step"><strong>2.</strong> Скачай Plasmo Voice для своей версии по кнопке «Скачать».</div>
+      <div class="step"><strong>3.</strong> Помести мод в папку <code>.minecraft/mods</code>.</div>
+      <div class="step"><strong>4.</strong> Зайди на сервер <strong>play.your-server.ru</strong>.</div>
+      <div class="step"><strong>5.</strong> В игре нажми <strong>V</strong> для настроек голоса.</div>
     </div>
 
     <div class="footer">
-      Сайт сделан для сервера. По вопросам обращайся в Discord. <br>
-      Plasmo Voice — не наша разработка, спасибо команде Plasmo.
+      Сайт сделан для сервера. По вопросам обращайся в Discord.<br>
+      Plasmo Voice — не наша разработка.
     </div>
   </div>
 </body>
