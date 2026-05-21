@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plasmo Voice — Версии</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f0f0f0;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh; padding: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 40px 32px;
+      max-width: 600px; width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 10px; color: #00c6ff; }
+    p.desc { color: #aaa; margin-bottom: 30px; }
+    .version-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .version-item {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px; padding: 14px 20px;
+      margin-bottom: 10px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 15px;
+    }
+    .version-info { text-align: left; }
+    .version-name { font-weight: 600; font-size: 1.1rem; }
+    .badge {
+      display: inline-block; padding: 4px 10px; border-radius: 20px;
+      font-size: 0.75rem; font-weight: bold; text-transform: uppercase;
+      margin-left: 10px;
+    }
+    .badge.working { background: #1b5e20; color: #a5d6a7; }
+    .badge.unworking { background: #b71c1c; color: #ffcdd2; }
+    .download-link {
+      background: #0072ff; color: white;
+      padding: 8px 20px; border-radius: 10px;
+      font-weight: 600; text-decoration: none;
+      white-space: nowrap; transition: background 0.2s;
+    }
+    .download-link:hover { background: #005bcc; }
+    .footer {
+      margin-top: 30px; font-size: 0.85rem; color: #666;
+    }
+    a { color: #00c6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Доступные версии Plasmo Voice</h1>
+    <p class="desc">Новейшая версия помечена как рабочая (working).<br>Старые версии оставлены для истории.</p>
+
+    <ul class="version-list">
+      <!-- САМАЯ НОВАЯ (working) – заменяй, когда выходит обновление -->
+      <li class="version-item">
+        <div class="version-info">
+          <span class="version-name">Plasmo Voice 1.20.1 Fabric</span>
+          <span class="badge working">working</span>
+        </div>
+        <a href="#" class="download-link">Скачать</a>
+      </li>
+
+      <!-- СТАРЫЕ ВЕРСИИ (unworking) – при выходе новой перемести сюда старую working -->
+      <li class="version-item">
+        <div class="version-info">
+          <span class="version-name">Plasmo Voice 1.19.4 Fabric</span>
+          <span class="badge unworking">unworking</span>
+        </div>
+        <a href="#" class="download-link">Скачать</a>
+      </li>
+      <!-- При добавлении новых версий я вставляю строчки по такому же шаблону -->
+    </ul>
+
+    <div class="footer">
+      ← <a href="https://voice.foggyland.ru">Вернуться на главную</a>
+    </div>
+  </div>
+</body>
+</html>
